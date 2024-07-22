@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kösystem</title>
+    <title>Simple Massage Event</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Välkommen till vårt kösystem</h1>
-        <button id="get-ticket">Ta en kölapp</button>
-        <p id="ticket-number"></p>
-        <p>Skanna denna QR-kod för att ta en kölapp:</p>
-        <img id="qr-code" src="qr-code-placeholder.png" alt="QR kod">
+    <div id="app">
+        <div id="homepage">
+            <h1>Welcome to the Simple Massage Event</h1>
+            <button id="takeNumber">Take a Queue Number</button>
+        </div>
+        <div id="customerView" style="display: none;">
+            <h1>Your Queue Number</h1>
+            <p id="queueNumber"></p>
+            <p id="waitTime">Estimated Waiting Time: <span id="estimatedTime"></span></p>
+        </div>
+        <div id="adminView" style="display: none;">
+            <h1>Admin Panel</h1>
+            <ul id="queueList"></ul>
+            <button id="callNext">Call Next Customer</button>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
